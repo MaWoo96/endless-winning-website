@@ -10,28 +10,23 @@ export default function TestimonialsCarousel() {
 
   const testimonials = [
     {
-      company: "Company",
+      company: "River Church",
+      logo: "/Testimonial Images/River_Logo.png",
       stars: 5,
-      quote: "They understood our vision from day one and built systems that freed us to focus on ministry, not admin. Endless Winning helped us reach more people without burning out our team.",
-      author: "Elaine Morris",
-      role: "Lead Pastor",
-      avatar: "/avatars/elaine.jpg"
+      quote: "Troy helped us implement a task management software that has literally saved us months of time and brought a new level of organization to our ministry. He established a consistent cadence with our team that kept us unified, focused, and productive. His creativity, intelligence, and deep knowledge were evident, but what stood out most was his heart. Troy genuinely loves God and is passionate about seeing others succeed.",
+      author: "River Church West Palm Beach",
+      role: "Ministry Staff",
+      avatar: "/Testimonial Images/River_Logo.png",
+      isLogo: true
     },
     {
-      company: "Company",
+      company: "MillionAire Heating, Air and Plumbing",
       stars: 5,
-      quote: "They understood our vision from day one and built systems that freed us to focus on ministry, not admin. Endless Winning helped us reach more people without burning out our team.",
-      author: "Elaine Morris",
-      role: "Lead Pastor",
-      avatar: "/avatars/elaine.jpg"
-    },
-    {
-      company: "Company",
-      stars: 5,
-      quote: "They understood our vision from day one and built systems that freed us to focus on ministry, not admin. Endless Winning helped us reach more people without burning out our team.",
-      author: "Elaine Morris",
-      role: "Lead Pastor",
-      avatar: "/avatars/elaine.jpg"
+      quote: "Troy helped us start an outbound sales team that helped us close over $50,000 of estimates in the first 60 days and automate our lead follow up system.",
+      author: "Brandon Cronkhite",
+      role: "Owner, MillionAire Heating, Air and Plumbing",
+      avatar: "/Testimonial Images/Brandon.jpg",
+      isLogo: false
     }
   ];
 
@@ -146,8 +141,13 @@ export default function TestimonialsCarousel() {
                       <div className="flex flex-col items-center">
                         <div className="relative mb-3 sm:mb-4">
                           <div className="absolute w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 blur-sm"></div>
-                          <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gray-200 overflow-hidden">
-                            {/* Placeholder for avatar image */}
+                          <div className={`relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden ${testimonial.isLogo ? 'bg-white p-2' : 'bg-gray-200'}`}>
+                            <Image
+                              src={testimonial.avatar}
+                              alt={testimonial.author}
+                              fill
+                              className={testimonial.isLogo ? 'object-contain' : 'object-cover'}
+                            />
                           </div>
                         </div>
                         <div className="text-center">
