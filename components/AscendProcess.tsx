@@ -157,11 +157,12 @@ export default function AscendProcess() {
           <h2
             className="text-[64px] font-black tracking-[0.2em] text-center mb-8 leading-none"
             style={{
-              background: 'linear-gradient(90deg, #BDEBEB 0%, #2F4F6A 100%)',
+              background: 'linear-gradient(90deg, #FFFFFF 0%, #C5E8E8 50%, #8AB2B2 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              filter: 'drop-shadow(0px 0px 20px rgba(189, 235, 235, 0.6)) drop-shadow(0px 0px 40px rgba(189, 235, 235, 0.4))'
+              textShadow: '0px 1px 4px rgba(0, 0, 0, 0.1)',
+              filter: 'drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.3))'
             }}
           >
             ASCEND
