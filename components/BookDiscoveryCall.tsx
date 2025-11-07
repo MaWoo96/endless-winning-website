@@ -120,14 +120,14 @@ export default function BookDiscoveryCall() {
                     placeholder="First Name"
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
+                    className="w-full sm:flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
+                    className="w-full sm:flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                   />
                 </div>
 
@@ -190,18 +190,30 @@ export default function BookDiscoveryCall() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
+                    className="w-full sm:flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
                   />
                 </div>
 
-                {/* Date */}
-                <input
-                  type="date"
-                  value={formData.date}
-                  onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                  className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark"
-                  min={new Date().toISOString().split('T')[0]}
-                />
+                {/* Preferred Date */}
+                <div className="relative">
+                  <input
+                    type="date"
+                    value={formData.date}
+                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                    className="w-full h-14 px-4 pr-12 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark"
+                    style={{
+                      colorScheme: 'light',
+                      WebkitAppearance: 'none',
+                      MozAppearance: 'textfield'
+                    }}
+                    min={new Date().toISOString().split('T')[0]}
+                  />
+                  {!formData.date && (
+                    <label className="absolute left-4 top-1/2 -translate-y-1/2 text-base text-[rgba(26,7,16,0.65)] pointer-events-none select-none">
+                      Preferred Date
+                    </label>
+                  )}
+                </div>
               </div>
 
               {/* Submit Button - Enhanced */}
