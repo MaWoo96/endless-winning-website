@@ -200,7 +200,8 @@ export default function BookDiscoveryCall() {
                     type="date"
                     value={formData.date}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="w-full h-14 px-4 pr-12 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark"
+                    placeholder="Preferred Date"
+                    className="w-full h-14 px-4 pr-12 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark placeholder:text-[rgba(26,7,16,0.65)]"
                     style={{
                       colorScheme: 'light',
                       WebkitAppearance: 'none',
@@ -208,11 +209,6 @@ export default function BookDiscoveryCall() {
                     }}
                     min={new Date().toISOString().split('T')[0]}
                   />
-                  {!formData.date && (
-                    <label className="absolute left-4 top-1/2 -translate-y-1/2 text-base text-[rgba(26,7,16,0.65)] pointer-events-none select-none">
-                      Preferred Date
-                    </label>
-                  )}
                 </div>
               </div>
 
