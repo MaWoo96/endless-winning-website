@@ -7,7 +7,9 @@ import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import WorkingWithUs from '@/components/WorkingWithUs';
 import AscendProcess from '@/components/AscendProcess';
 import WhoWeHelp from '@/components/WhoWeHelp';
+import TeamShowcase from '@/components/TeamShowcase';
 import BookDiscoveryCall from '@/components/BookDiscoveryCall';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import AboutModal from '@/components/AboutModal';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -33,7 +35,13 @@ export default function Home() {
           <WhoWeHelp />
         </AnimatedSection>
         <AnimatedSection>
+          <TeamShowcase />
+        </AnimatedSection>
+        <AnimatedSection>
           <BookDiscoveryCall />
+        </AnimatedSection>
+        <AnimatedSection>
+          <FAQ />
         </AnimatedSection>
         <AnimatedSection>
           <Footer />

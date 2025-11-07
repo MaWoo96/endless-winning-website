@@ -83,7 +83,7 @@ export default function Hero() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }} className="w-full sm:w-auto">
                 <Link
-                  href="#contact"
+                  href="#booking-form"
                   className="inline-flex items-center justify-center gap-3 px-10 py-5 md:px-12 md:py-6 text-base md:text-lg font-bold bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg w-full sm:w-auto"
                   style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
                 >

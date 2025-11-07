@@ -10,23 +10,12 @@ export default function BookDiscoveryCall() {
     lastName: '',
     email: '',
     organization: '',
-    countryCode: '+1',
     phone: '',
-    date: '',
   });
 
-  const [showCountryDropdown, setShowCountryDropdown] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-
-  const countryCodes = [
-    { code: '+1', country: 'US/CA' },
-    { code: '+44', country: 'UK' },
-    { code: '+61', country: 'AU' },
-    { code: '+81', country: 'JP' },
-    { code: '+49', country: 'DE' },
-  ];
 
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -45,8 +34,7 @@ export default function BookDiscoveryCall() {
           lastName: formData.lastName,
           email: formData.email,
           organization: formData.organization,
-          phone: `${formData.countryCode}${formData.phone}`,
-          preferredDate: formData.date,
+          phone: formData.phone,
         }),
       });
 
@@ -58,9 +46,7 @@ export default function BookDiscoveryCall() {
           lastName: '',
           email: '',
           organization: '',
-          countryCode: '+1',
           phone: '',
-          date: '',
         });
       } else {
         setSubmitError('Something went wrong. Please try again.');
@@ -138,13 +124,13 @@ export default function BookDiscoveryCall() {
                     height={48}
                   />
                 </div>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-navy-dark font-medium">contacts@endlesswinning.com</p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-navy-dark font-medium">contactus@endlesswinning.com</p>
               </div>
             </div>
           </div>
 
           {/* Right Side - Form */}
-          <div className="bg-white rounded-[24px] shadow-[0px_2px_52px_0px_rgba(0,0,0,0.08)] p-6 sm:p-7 md:p-9 lg:p-11 max-w-[502px] lg:ml-auto w-full">
+          <div id="booking-form" className="bg-white rounded-[24px] shadow-[0px_2px_52px_0px_rgba(0,0,0,0.08)] p-6 sm:p-7 md:p-9 lg:p-11 max-w-[502px] lg:ml-auto w-full">
             <form onSubmit={handleSubmit} className="flex flex-col gap-5 sm:gap-5 md:gap-6">
               {/* Form Header */}
               <h3 className="text-xl sm:text-2xl md:text-[26px] lg:text-[28px] font-semibold text-navy-dark text-center mb-2">
@@ -152,7 +138,7 @@ export default function BookDiscoveryCall() {
               </h3>
 
               {/* Form Fields */}
-              <div className="flex flex-col gap-4 sm:gap-4">
+              <div className="flex flex-col gap-4 sm:gap-4 isolate">
                 {/* First Name & Last Name */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
                   <input
@@ -189,67 +175,14 @@ export default function BookDiscoveryCall() {
                   className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                 />
 
-                {/* Phone Number with Country Code */}
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
-                  <div className="relative w-full sm:w-[120px]">
-                    <button
-                      type="button"
-                      onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                      className="w-full h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between gap-2 text-base text-navy-dark hover:border-navy-dark transition-colors"
-                    >
-                      <span className="font-medium">{formData.countryCode}</span>
-                      <Image
-                        src="/Unlock your next level/arrow-down-01.svg"
-                        alt=""
-                        width={24}
-                        height={24}
-                        className="w-6 h-6"
-                      />
-                    </button>
-                    {showCountryDropdown && (
-                      <div className="absolute top-full mt-1 left-0 w-full bg-white border border-[#dddddd] rounded-xl shadow-lg z-10 max-h-48 overflow-y-auto">
-                        {countryCodes.map((item) => (
-                          <button
-                            key={item.code}
-                            type="button"
-                            onClick={() => {
-                              setFormData({ ...formData, countryCode: item.code });
-                              setShowCountryDropdown(false);
-                            }}
-                            className="w-full px-4 py-3 text-left text-sm hover:bg-navy-dark/5 transition-colors flex justify-between items-center"
-                          >
-                            <span className="font-medium">{item.code}</span>
-                            <span className="text-xs text-gray-500">{item.country}</span>
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full sm:flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
-                  />
-                </div>
-
-                {/* Preferred Date */}
-                <div className="relative">
-                  <input
-                    type="date"
-                    value={formData.date}
-                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    placeholder="Preferred Date"
-                    className="w-full h-14 px-4 pr-12 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark placeholder:text-[rgba(26,7,16,0.65)]"
-                    style={{
-                      colorScheme: 'light',
-                      WebkitAppearance: 'none',
-                      MozAppearance: 'textfield'
-                    }}
-                    min={new Date().toISOString().split('T')[0]}
-                  />
-                </div>
+                {/* Phone Number */}
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
+                />
               </div>
 
               {/* Error Message */}

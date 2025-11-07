@@ -220,7 +220,7 @@ export default function AscendProcess() {
         {/* CTA Button - Enhanced */}
         <div className="flex justify-center mt-12">
           <Link
-            href="#contact"
+            href="#booking-form"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white px-10 py-4 md:px-12 md:py-5 rounded-full font-bold text-base md:text-lg shadow-lg hover:opacity-90 transition-opacity"
             style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
           >

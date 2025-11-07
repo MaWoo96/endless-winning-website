@@ -209,7 +209,7 @@ export default function TestimonialsCarousel() {
         {/* CTA Button - Enhanced */}
         <div className="text-center mt-8 sm:mt-12">
           <a
-            href="#contact"
+            href="#booking-form"
             className="bg-gradient-to-r from-[#5856d6] to-[#ec4899] hover:opacity-90 text-white px-10 py-4 sm:px-12 sm:py-5 rounded-full font-bold text-base sm:text-lg shadow-lg inline-flex items-center gap-3 transition-opacity"
             style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
           >
