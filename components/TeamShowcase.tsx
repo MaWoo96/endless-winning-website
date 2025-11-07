@@ -13,22 +13,22 @@ export default function TeamShowcase() {
     {
       name: "Pastor Alex Burgos",
       image: "/Winning Team/Alex Burgos.jpeg",
-      tags: ["Ministry Leadership", "Pentecostal", "River Orlando Church", "Community Building", "Spiritual Growth"],
-      bio: "Pastor Alex Burgos leads River Orlando Church in Sorrento, Florida, where he and his wife Lauren are dedicated to raising up a generation that demonstrates Jesus is alive through the love of the Father, godly character, and the power of the Holy Spirit. Ordained by Revival Ministries International after serving since 2003, Alex shepherds a vibrant Pentecostal community focused on seeking and saving the lost while seeing treasure in the broken.",
+      tags: ["Senior Pastor", "Business Mentorship", "Kingdom Business", "Leadership Development", "Wealth Building"],
+      bio: "Pastor Alex Burgos serves as senior pastor alongside his wife Lauren at the River Orlando Church in Sorrento, Florida. Pastor Alex has an intense commitment to raising up godly businessmen who maximize their impact both in their team cultures and financially. He has raised up many multi-millionaires who faithfully serve their family and the kingdom of God through business.",
       linkedin: ""
     },
     {
       name: "Tim Jooste",
       image: "/Winning Team/Timothy Jooste.jpg",
-      tags: ["CEO", "Sales Leadership", "Tech Industry", "Team Building", "Blockchain Gaming"],
-      bio: "Tim Jooste brings 17 years of elite sales and team-building expertise from the tech industry to his role as Founder and CEO of Koin Games. After building a 600-person organization at Vivint Smart Home that generated over $3 billion in revenue while maintaining the industry's highest retention rate, Tim now applies his proven leadership to revolutionizing blockchain gaming. A Gold Stevie Award winner for Sales Director of the Year in 2017, Tim is passionate about creating games where players truly own their digital assets.",
+      tags: ["CEO & Founder", "Sales Leadership", "Team Scaling", "Blockchain Gaming", "Tech Industry"],
+      bio: "Tim Jooste is the founder and CEO of Koin Games, a blockchain gaming studio in the video game industry. He has a proven track record of scaling sales teams that helped Vivint reach nearly 700 employees and $300m in revenue. Tim combines his experience in tech and sales with his passion for leadership to maximize impact.",
       linkedin: ""
     },
     {
       name: "Tony Utegaard",
       image: "/Winning Team/Tony Uteegard.jpeg",
-      tags: ["Entrepreneur", "Business Owner", "Manufacturing", "Real Estate", "Multi-Industry"],
-      bio: "Tony Utegaard is a Tampa Bay-based entrepreneur who develops, owns, and manages a diverse portfolio of successful companies spanning manufacturing, real estate development, eCommerce, hospitality, and retail across 38 countries. As owner of Ps133, Inc., a business management firm, Tony oversees ventures including Car Pool Table (custom pool tables from vintage automobiles), Symbetheri construction consulting, and multiple hospitality and retail operations, bringing innovative vision and strategic execution to each enterprise.",
+      tags: ["Visionary Entrepreneur", "Real Estate Developer", "Investor", "Kingdom Business", "Luxury Design"],
+      bio: "Tony Utegaard is a visionary entrepreneur, investor, and developer based in Bel Air Bluffs, Florida, leading multi-million-dollar ventures in real estate, construction, and luxury design while teaching business and financial principles through Kingdom Business Fellowship.",
       linkedin: ""
     }
   ];
