@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import ServicesShowcase from '@/components/ServicesShowcase';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import WorkingWithUs from '@/components/WorkingWithUs';
 import AscendProcess from '@/components/AscendProcess';
@@ -22,6 +23,9 @@ export default function Home() {
       <main className="min-h-screen">
         <Header onAboutClick={() => setIsAboutModalOpen(true)} />
         <Hero />
+        <AnimatedSection>
+          <ServicesShowcase />
+        </AnimatedSection>
         <AnimatedSection>
           <TestimonialsCarousel />
         </AnimatedSection>
