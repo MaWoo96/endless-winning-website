@@ -142,7 +142,7 @@ export default function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-sm text-[#64748b]">
+            <p className="text-sm text-navy-dark/70">
               Copyright © 2025 EndlessWinning. All Rights Reserved.
             </p>
           </div>

@@ -84,11 +84,12 @@ export default function Hero() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }} className="w-full sm:w-auto">
                 <Link
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 md:px-10 md:py-5 text-sm md:text-base font-bold bg-navy-dark text-white rounded-xl border-2 border-[#5856d6] hover:bg-navy-dark/90 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-3 px-10 py-5 md:px-12 md:py-6 text-base md:text-lg font-bold bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg w-full sm:w-auto"
+                  style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
                 >
                   <span>Book a Discovery Call</span>
-                  <svg className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  <svg className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M9 5l7 7-7 7"></path>
                   </svg>
                 </Link>
               </motion.div>

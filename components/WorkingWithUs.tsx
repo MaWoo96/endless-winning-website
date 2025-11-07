@@ -53,7 +53,7 @@ export default function WorkingWithUs() {
                 <h3 className="text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-semibold text-navy-dark leading-tight">
                   Get Unshakeable Clarity
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg text-navy-dark opacity-70 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-navy-dark/90 leading-relaxed">
                   A dream without a plan is just a delusion. Know what to do—and what to do now—with bold, purpose-driven direction.
                 </p>
               </div>
@@ -98,8 +98,8 @@ export default function WorkingWithUs() {
                 <h3 className="text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-semibold text-navy-dark leading-tight">
                   Accelerated Results
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg text-navy-dark opacity-70 leading-relaxed">
-                  Unstoppable growth powered by streamlined, data-backed systems—built for AI, automation, and scale. <span className="font-semibold text-navy-dark opacity-100">Designed for your future.</span>
+                <p className="text-sm sm:text-base md:text-lg text-navy-dark/90 leading-relaxed">
+                  Unstoppable growth powered by streamlined, data-backed systems—built for AI, automation, and scale. <span className="font-semibold text-navy-dark">Designed for your future.</span>
                 </p>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function WorkingWithUs() {
                 <h3 className="text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-semibold text-navy-dark leading-tight">
                   Real-World Impact
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg text-navy-dark opacity-70 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-navy-dark/90 leading-relaxed">
                   From boardrooms to sanctuaries, our work drives real transformation - meaningful ROI, deeper engagement, and lasting growth.
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default function WorkingWithUs() {
                 <h3 className="text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-semibold text-white leading-tight">
                   Future Proof Your Organization
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg text-white opacity-70 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-white/95 leading-relaxed">
                   AI is reshaping entire industries. The organizations that don't position themselves will be left behind. The best time to future-proof was yesterday. The next best time is now.
                 </p>
               </div>

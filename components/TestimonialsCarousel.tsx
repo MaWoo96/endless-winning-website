@@ -197,14 +197,18 @@ export default function TestimonialsCarousel() {
           </div>
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Button - Enhanced */}
         <div className="text-center mt-8 sm:mt-12">
-          <button className="bg-gradient-to-r from-[#8b5cf6] to-[#ec4899] hover:opacity-90 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-xs sm:text-sm backdrop-blur-sm inline-flex items-center gap-2 transition-opacity">
+          <a
+            href="#contact"
+            className="bg-gradient-to-r from-[#5856d6] to-[#ec4899] hover:opacity-90 text-white px-10 py-4 sm:px-12 sm:py-5 rounded-full font-bold text-base sm:text-lg shadow-lg inline-flex items-center gap-3 transition-opacity"
+            style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
+          >
             <span>Book a Discovery Call</span>
-            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M9 5l7 7-7 7"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </div>
     </section>

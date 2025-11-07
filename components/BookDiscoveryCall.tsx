@@ -10,15 +10,36 @@ export default function BookDiscoveryCall() {
     lastName: '',
     email: '',
     organization: '',
+    countryCode: '+1',
     phone: '',
     date: '',
-    timezone: '',
+    timezone: 'UTC-05:00',
   });
+
+  const [showCountryDropdown, setShowCountryDropdown] = useState(false);
+  const [showTimezoneDropdown, setShowTimezoneDropdown] = useState(false);
+
+  const countryCodes = [
+    { code: '+1', country: 'US/CA' },
+    { code: '+44', country: 'UK' },
+    { code: '+61', country: 'AU' },
+    { code: '+81', country: 'JP' },
+    { code: '+49', country: 'DE' },
+  ];
+
+  const timezones = [
+    'UTC-05:00 (EST)',
+    'UTC-06:00 (CST)',
+    'UTC-07:00 (MST)',
+    'UTC-08:00 (PST)',
+    'UTC+00:00 (GMT)',
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
+    // TODO: Integrate with actual form submission service
   };
 
   return (
@@ -73,20 +94,7 @@ export default function BookDiscoveryCall() {
                     height={48}
                   />
                 </div>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-navy-dark">Tampa, Florida</p>
-              </div>
-
-              {/* Phone */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 shrink-0">
-                  <Image
-                    src="/Unlock your next level/Group 2085663707.svg"
-                    alt="Phone"
-                    width={48}
-                    height={48}
-                  />
-                </div>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-navy-dark">+(123)-456-789</p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-navy-dark font-medium">Tampa, Florida</p>
               </div>
 
               {/* Email */}
@@ -99,7 +107,7 @@ export default function BookDiscoveryCall() {
                     height={48}
                   />
                 </div>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-navy-dark">endlesswinning@email.com</p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-navy-dark font-medium">contacts@endlesswinning.com</p>
               </div>
             </div>
           </div>
@@ -152,60 +160,104 @@ export default function BookDiscoveryCall() {
 
                 {/* Phone Number with Country Code */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <div className="w-full sm:w-[93px] h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl flex items-center gap-2 text-sm sm:text-base text-[rgba(26,7,16,0.65)]">
-                    <span>+ 813</span>
-                    <Image
-                      src="/Unlock your next level/arrow-down-01.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                      className="w-5 h-5 sm:w-6 sm:h-6"
-                    />
+                  <div className="relative w-full sm:w-[120px]">
+                    <button
+                      type="button"
+                      onClick={() => setShowCountryDropdown(!showCountryDropdown)}
+                      className="w-full h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between gap-2 text-sm sm:text-base text-navy-dark hover:border-navy-dark transition-colors"
+                    >
+                      <span className="font-medium">{formData.countryCode}</span>
+                      <Image
+                        src="/Unlock your next level/arrow-down-01.svg"
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="w-5 h-5 sm:w-6 sm:h-6"
+                      />
+                    </button>
+                    {showCountryDropdown && (
+                      <div className="absolute top-full mt-1 left-0 w-full bg-white border border-[#dddddd] rounded-xl shadow-lg z-10 max-h-48 overflow-y-auto">
+                        {countryCodes.map((item) => (
+                          <button
+                            key={item.code}
+                            type="button"
+                            onClick={() => {
+                              setFormData({ ...formData, countryCode: item.code });
+                              setShowCountryDropdown(false);
+                            }}
+                            className="w-full px-4 py-3 text-left text-sm hover:bg-navy-dark/5 transition-colors flex justify-between items-center"
+                          >
+                            <span className="font-medium">{item.code}</span>
+                            <span className="text-xs text-gray-500">{item.country}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <input
                     type="tel"
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
+                    className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
                   />
                 </div>
 
                 {/* Date & Timezone */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <div className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between text-sm sm:text-base text-[rgba(26,7,16,0.65)]">
-                    <span>08/20/2025</span>
-                    <Image
-                      src="/Unlock your next level/arrow-down-01.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                      className="w-5 h-5 sm:w-6 sm:h-6"
-                    />
-                  </div>
-                  <div className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between text-sm sm:text-base text-[rgba(26,7,16,0.65)]">
-                    <span>UTC - 04:00</span>
-                    <Image
-                      src="/Unlock your next level/arrow-down-01.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                      className="w-5 h-5 sm:w-6 sm:h-6"
-                    />
+                  <input
+                    type="date"
+                    value={formData.date}
+                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                    className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base text-navy-dark focus:outline-none focus:border-navy-dark"
+                    min={new Date().toISOString().split('T')[0]}
+                  />
+                  <div className="relative flex-1">
+                    <button
+                      type="button"
+                      onClick={() => setShowTimezoneDropdown(!showTimezoneDropdown)}
+                      className="w-full h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between text-sm sm:text-base text-navy-dark hover:border-navy-dark transition-colors"
+                    >
+                      <span className="truncate">{formData.timezone}</span>
+                      <Image
+                        src="/Unlock your next level/arrow-down-01.svg"
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
+                      />
+                    </button>
+                    {showTimezoneDropdown && (
+                      <div className="absolute top-full mt-1 left-0 w-full bg-white border border-[#dddddd] rounded-xl shadow-lg z-10 max-h-48 overflow-y-auto">
+                        {timezones.map((tz) => (
+                          <button
+                            key={tz}
+                            type="button"
+                            onClick={() => {
+                              setFormData({ ...formData, timezone: tz });
+                              setShowTimezoneDropdown(false);
+                            }}
+                            className="w-full px-4 py-3 text-left text-sm hover:bg-navy-dark/5 transition-colors text-navy-dark"
+                          >
+                            {tz}
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
 
-              {/* Submit Button */}
+              {/* Submit Button - Enhanced */}
               <motion.button
                 type="submit"
-                className="w-full min-h-[48px] sm:min-h-[52px] md:min-h-[56px] bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white text-sm sm:text-base md:text-lg font-bold rounded-full"
+                className="w-full min-h-[56px] sm:min-h-[60px] md:min-h-[64px] bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white text-base sm:text-lg md:text-xl font-bold rounded-full shadow-lg mt-2"
                 style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
               >
-                Book Now
+                Book Discovery Call
               </motion.button>
 
               {/* Terms */}

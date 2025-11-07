@@ -175,8 +175,8 @@ export default function AscendProcess() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.3, delay: isMobile ? 0 : index * 0.08, ease: "easeOut" }}
-              className={`bg-white/20 rounded-[24px] px-10 py-4 overflow-hidden ${
-                isMobile ? '' : 'backdrop-blur-sm'
+              className={`bg-white/25 rounded-[24px] px-10 py-4 overflow-hidden shadow-lg ${
+                isMobile ? '' : 'backdrop-blur-md border border-white/30'
               }`}
               style={isMobile ? { willChange: 'opacity, transform' } : {}}
             >
@@ -209,16 +209,16 @@ export default function AscendProcess() {
           ))}
         </div>
 
-        {/* CTA Button with exact Figma styling */}
+        {/* CTA Button - Enhanced */}
         <div className="flex justify-center mt-12">
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white px-6 py-2 rounded-full font-semibold text-xs shadow-[0px_0px_42px_0px_rgba(0,0,0,0.25)] hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white px-10 py-4 md:px-12 md:py-5 rounded-full font-bold text-base md:text-lg shadow-lg hover:opacity-90 transition-opacity"
             style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
           >
             <span>Book a Discovery Call</span>
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M9 5l7 7-7 7"></path>
             </svg>
           </Link>
         </div>

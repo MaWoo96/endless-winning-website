@@ -118,14 +118,14 @@ export default function WhoWeHelp() {
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-navy-dark leading-tight mb-3 sm:mb-4">
                   {title}
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-neutral-950 opacity-80 max-w-md mx-auto">
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-navy-dark max-w-md mx-auto">
                   {description.replace(/\n/g, ' ')}
                 </p>
               </motion.div>
             </AnimatePresence>
 
             {/* Phone Mockup */}
-            <div className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] mx-auto mb-6 sm:mb-8" style={{ aspectRatio: '448/575' }}>
+            <div className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] mx-auto mb-6 sm:mb-8" style={{ aspectRatio: '448/575' }}>
               <Image
                 src="/Who we help/7e0e14cfdc897a0675496bb6d08d9d3a08094d6e.png"
                 alt="Phone Mockup"
@@ -163,7 +163,7 @@ export default function WhoWeHelp() {
           </div>
 
           {/* Desktop Layout (absolute positioning) - hidden on mobile */}
-          <div className="hidden lg:block relative h-[664px]">
+          <div className="hidden lg:block relative h-[900px]">
             {/* Icon - positioned at top:60px from Figma */}
             <div className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10">
               <div className="w-[69px] h-[69px] rounded-full bg-gradient-to-br from-[#8ab2b2] to-[#BDEBEB] flex items-center justify-center">
@@ -190,7 +190,7 @@ export default function WhoWeHelp() {
                 <h3 className="text-[36px] font-semibold text-navy-dark leading-[28px] mb-4">
                   {title}
                 </h3>
-                <p className="text-lg leading-[28px] text-neutral-950 opacity-80 whitespace-pre-line">
+                <p className="text-lg leading-[28px] text-navy-dark whitespace-pre-line">
                   {description}
                 </p>
               </motion.div>
@@ -200,7 +200,7 @@ export default function WhoWeHelp() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={`left-${activeTab}`}
-                className="absolute left-[124px] top-[280px] flex flex-col gap-[120px] z-10"
+                className="absolute left-[80px] top-[340px] flex flex-col gap-[150px] z-10"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
@@ -232,7 +232,7 @@ export default function WhoWeHelp() {
             </AnimatePresence>
 
             {/* Center Phone Mockup - scaled up dramatically to match reference */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-[20px] w-[850px] h-[1092px] shrink-0 z-10" style={{ aspectRatio: '448/575' }}>
+            <div className="absolute left-1/2 -translate-x-1/2 top-[20px] w-[1200px] h-[1540px] shrink-0 z-10" style={{ aspectRatio: '448/575' }}>
               <Image
                 src="/Who we help/7e0e14cfdc897a0675496bb6d08d9d3a08094d6e.png"
                 alt="Phone Mockup"
@@ -245,7 +245,7 @@ export default function WhoWeHelp() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={`right-${activeTab}`}
-                className="absolute left-[930px] top-[280px] flex flex-col gap-[120px] z-10"
+                className="absolute left-[1080px] top-[340px] flex flex-col gap-[150px] z-10"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
