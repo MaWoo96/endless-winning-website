@@ -124,17 +124,7 @@ export default function WhoWeHelp() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Phone Mockup */}
-            <div className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] mx-auto mb-6 sm:mb-8" style={{ aspectRatio: '448/575' }}>
-              <Image
-                src="/Who we help/7e0e14cfdc897a0675496bb6d08d9d3a08094d6e.png"
-                alt="Phone Mockup"
-                fill
-                className="object-contain"
-              />
-            </div>
-
-            {/* Features Grid */}
+            {/* Features Grid - Centered */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={`mobile-${activeTab}`}
