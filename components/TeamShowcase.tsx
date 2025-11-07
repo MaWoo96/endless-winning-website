@@ -11,32 +11,25 @@ export default function TeamShowcase() {
 
   const teamMembers = [
     {
-      name: "Tony Jones",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop",
-      tags: ["CFO", "Finance", "Commercial Realestate", "Entreprenuer Specialties", "Leadership"],
-      bio: "Tony is a highly accomplished business leader with extensive experience across industries A, B, and C. He brings a proven track record of driving growth, building strong partnerships, and delivering strategic results.",
-      linkedin: "https://linkedin.com/in/tonyjones"
+      name: "Pastor Alex Burgos",
+      image: "/Winning Team/Alex Burgos.jpeg",
+      tags: ["Ministry Leadership", "Pentecostal", "River Orlando Church", "Community Building", "Spiritual Growth"],
+      bio: "Pastor Alex Burgos leads River Orlando Church in Sorrento, Florida, where he and his wife Lauren are dedicated to raising up a generation that demonstrates Jesus is alive through the love of the Father, godly character, and the power of the Holy Spirit. Ordained by Revival Ministries International after serving since 2003, Alex shepherds a vibrant Pentecostal community focused on seeking and saving the lost while seeing treasure in the broken.",
+      linkedin: ""
     },
     {
-      name: "Sarah Mitchell",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop",
-      tags: ["CTO", "Technology", "Innovation", "Digital Transformation", "AI Strategy"],
-      bio: "Sarah is a visionary technology leader with over 15 years of experience driving digital transformation. She specializes in leveraging AI and automation to create scalable solutions that propel businesses forward.",
-      linkedin: "https://linkedin.com/in/sarahmitchell"
+      name: "Tim Jooste",
+      image: "/Winning Team/Timothy Jooste.jpg",
+      tags: ["CEO", "Sales Leadership", "Tech Industry", "Team Building", "Blockchain Gaming"],
+      bio: "Tim Jooste brings 17 years of elite sales and team-building expertise from the tech industry to his role as Founder and CEO of Koin Games. After building a 600-person organization at Vivint Smart Home that generated over $3 billion in revenue while maintaining the industry's highest retention rate, Tim now applies his proven leadership to revolutionizing blockchain gaming. A Gold Stevie Award winner for Sales Director of the Year in 2017, Tim is passionate about creating games where players truly own their digital assets.",
+      linkedin: ""
     },
     {
-      name: "Marcus Rodriguez",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=1000&fit=crop",
-      tags: ["Operations", "Process Optimization", "Strategy", "Growth", "Analytics"],
-      bio: "Marcus brings deep expertise in operational excellence and strategic planning. His analytical approach and hands-on leadership have helped countless organizations streamline operations and achieve sustainable growth.",
-      linkedin: "https://linkedin.com/in/marcusrodriguez"
-    },
-    {
-      name: "Jennifer Chen",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=1000&fit=crop",
-      tags: ["Marketing", "Brand Strategy", "Digital Marketing", "Growth Hacking", "Content"],
-      bio: "Jennifer is a creative marketing strategist who has built powerful brands and driven exponential growth through innovative digital campaigns. Her data-driven approach delivers measurable results.",
-      linkedin: "https://linkedin.com/in/jenniferchen"
+      name: "Tony Utegaard",
+      image: "/Winning Team/Tony Uteegard.jpeg",
+      tags: ["Entrepreneur", "Business Owner", "Manufacturing", "Real Estate", "Multi-Industry"],
+      bio: "Tony Utegaard is a Tampa Bay-based entrepreneur who develops, owns, and manages a diverse portfolio of successful companies spanning manufacturing, real estate development, eCommerce, hospitality, and retail across 38 countries. As owner of Ps133, Inc., a business management firm, Tony oversees ventures including Car Pool Table (custom pool tables from vintage automobiles), Symbetheri construction consulting, and multiple hospitality and retail operations, bringing innovative vision and strategic execution to each enterprise.",
+      linkedin: ""
     }
   ];
 
