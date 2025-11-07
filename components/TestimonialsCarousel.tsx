@@ -27,6 +27,15 @@ export default function TestimonialsCarousel() {
       role: "Owner, MillionAire Heating, Air and Plumbing",
       avatar: "/Testimonial Images/Brandon.jpg",
       isLogo: false
+    },
+    {
+      company: "Official MX Detail",
+      stars: 5,
+      quote: "Troy automated our outbound text message campaign and the results were incredible—over $10,000 in new business in just one week. His expertise transformed how we reach customers and grow our mobile detailing business.",
+      author: "Alex",
+      role: "Owner, Official MX Detail",
+      avatar: "/Testimonial Images/Alex.jpg",
+      isLogo: false
     }
   ];
 
@@ -83,26 +92,24 @@ export default function TestimonialsCarousel() {
             </svg>
           </button>
 
-          {/* Cards Container with Mask Effect */}
-          <div className="overflow-hidden sm:mx-12 md:mx-16">
-            <motion.div
-              className="flex gap-4 sm:gap-6"
-              animate={{
-                x: typeof window !== 'undefined' && window.innerWidth < 640
-                  ? -currentSlide * (window.innerWidth - 32) // Mobile: full viewport width minus padding
-                  : -currentSlide * (355 + 24) // Desktop: 355px card + 24px gap
-              }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  className="flex-shrink-0 w-[calc(100vw-2rem)] sm:w-[355px]"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
-                >
+          {/* Cards Container - Single Card Display */}
+          <div className="relative w-full max-w-[800px] mx-auto">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.3 }}
+                className="w-full"
+              >
+                {(() => {
+                  const testimonial = testimonials[currentSlide];
+                  return (
+                    <motion.div
+                      className="testimonial-card w-full"
+                      whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
+                    >
                   <div className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative shadow-sm hover:shadow-xl transition-shadow duration-300 h-full">
                     {/* Gradient bottom border */}
                     <div className="absolute bottom-0 left-0 right-0 h-[4px] sm:h-[6px] bg-gradient-to-r from-[#5856D6] via-[#AF52DE] via-[#FF2D92] via-[#FF9500] via-[#40CBF0] to-[#007AFF]"></div>
@@ -162,8 +169,10 @@ export default function TestimonialsCarousel() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </motion.div>
+                  );
+                })()}
+              </motion.div>
+            </AnimatePresence>
           </div>
 
           {/* Right Arrow - Hidden on mobile */}
