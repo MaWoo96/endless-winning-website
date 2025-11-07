@@ -55,7 +55,7 @@ export default function Hero() {
             >
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-4 lg:px-0">
                 <span className="gradient-text block mb-1 sm:mb-2">Close the Gap.</span>
-                <span className="text-navy-dark block">From where you are, to where you&apos;re called to be.</span>
+                <span className="text-navy-dark block">Where you are → Where you&apos;re called to be.</span>
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-navy-dark/80 max-w-2xl mx-auto lg:mx-0 px-4 lg:px-0 leading-relaxed">

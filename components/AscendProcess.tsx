@@ -57,7 +57,7 @@ export default function AscendProcess() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 overflow-hidden bg-gradient-to-br from-[#6a94a8] via-[#536f84] to-[#7a8594]">
+    <section id="process" ref={sectionRef} className="relative py-24 overflow-hidden bg-gradient-to-br from-[#6a94a8] via-[#536f84] to-[#7a8594]">
       {/* Decorative blur ellipses - optimized for mobile */}
       {isInView && isClient && (
         <>
@@ -160,7 +160,8 @@ export default function AscendProcess() {
               background: 'linear-gradient(90deg, #BDEBEB 0%, #2F4F6A 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0px 0px 20px rgba(189, 235, 235, 0.6)) drop-shadow(0px 0px 40px rgba(189, 235, 235, 0.4))'
             }}
           >
             ASCEND
@@ -196,10 +197,16 @@ export default function AscendProcess() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-[#BDEBEB] text-2xl font-bold leading-[40px] mb-0">
+                  <h3
+                    className="text-[#BDEBEB] text-2xl font-bold leading-[40px] mb-0"
+                    style={step.letter === 'C' && isMobile ? { textShadow: '0px 2px 8px rgba(0,0,0,0.4)' } : {}}
+                  >
                     {step.title}
                   </h3>
-                  <p className="text-white text-[18px] leading-[24px] font-semibold">
+                  <p
+                    className="text-white text-[18px] leading-[24px] font-semibold"
+                    style={step.letter === 'C' && isMobile ? { textShadow: '0px 2px 8px rgba(0,0,0,0.4)' } : {}}
+                  >
                     <span className="italic font-semibold">{step.italicPart}</span>
                     {step.regularPart && <span>{step.regularPart}</span>}
                   </p>

@@ -16,7 +16,6 @@ export default function Header({ onAboutClick }: HeaderProps) {
     { label: 'About', href: '#about', onClick: onAboutClick },
     { label: 'The Process', href: '#process' },
     { label: 'Team', href: '#team' },
-    { label: 'Pricing', href: '#pricing' },
     { label: 'Contact', href: '#contact' },
   ];
 

@@ -13,11 +13,9 @@ export default function BookDiscoveryCall() {
     countryCode: '+1',
     phone: '',
     date: '',
-    timezone: 'UTC-05:00',
   });
 
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
-  const [showTimezoneDropdown, setShowTimezoneDropdown] = useState(false);
 
   const countryCodes = [
     { code: '+1', country: 'US/CA' },
@@ -27,13 +25,6 @@ export default function BookDiscoveryCall() {
     { code: '+49', country: 'DE' },
   ];
 
-  const timezones = [
-    'UTC-05:00 (EST)',
-    'UTC-06:00 (CST)',
-    'UTC-07:00 (MST)',
-    'UTC-08:00 (PST)',
-    'UTC+00:00 (GMT)',
-  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -203,49 +194,14 @@ export default function BookDiscoveryCall() {
                   />
                 </div>
 
-                {/* Date & Timezone */}
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
-                  <input
-                    type="date"
-                    value={formData.date}
-                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark"
-                    min={new Date().toISOString().split('T')[0]}
-                  />
-                  <div className="relative flex-1">
-                    <button
-                      type="button"
-                      onClick={() => setShowTimezoneDropdown(!showTimezoneDropdown)}
-                      className="w-full h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between text-base text-navy-dark hover:border-navy-dark transition-colors"
-                    >
-                      <span className="truncate">{formData.timezone}</span>
-                      <Image
-                        src="/Unlock your next level/arrow-down-01.svg"
-                        alt=""
-                        width={24}
-                        height={24}
-                        className="w-6 h-6 flex-shrink-0"
-                      />
-                    </button>
-                    {showTimezoneDropdown && (
-                      <div className="absolute top-full mt-1 left-0 w-full bg-white border border-[#dddddd] rounded-xl shadow-lg z-10 max-h-48 overflow-y-auto">
-                        {timezones.map((tz) => (
-                          <button
-                            key={tz}
-                            type="button"
-                            onClick={() => {
-                              setFormData({ ...formData, timezone: tz });
-                              setShowTimezoneDropdown(false);
-                            }}
-                            className="w-full px-4 py-3 text-left text-sm hover:bg-navy-dark/5 transition-colors text-navy-dark"
-                          >
-                            {tz}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
+                {/* Date */}
+                <input
+                  type="date"
+                  value={formData.date}
+                  onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                  className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark"
+                  min={new Date().toISOString().split('T')[0]}
+                />
               </div>
 
               {/* Submit Button - Enhanced */}
@@ -263,11 +219,11 @@ export default function BookDiscoveryCall() {
               {/* Terms */}
               <p className="text-xs sm:text-sm text-center text-[rgba(26,7,16,0.65)] leading-relaxed px-2">
                 By continuing I agree with the{' '}
-                <a href="#" className="text-navy-dark font-medium underline">
+                <a href="https://endlesswinning.notion.site/Terms-Conditions-Terms-of-Use-2a450f64638780d3a76df1aed6854f3a" target="_blank" rel="noopener noreferrer" className="text-navy-dark font-medium underline">
                   Terms & Conditions
                 </a>{' '}
                 and{' '}
-                <a href="#" className="text-navy-dark font-medium underline">
+                <a href="https://endlesswinning.notion.site/Privacy-Policy-2a450f64638780d794a8f3c910e2ef88" target="_blank" rel="noopener noreferrer" className="text-navy-dark font-medium underline">
                   Privacy Policy
                 </a>
               </p>

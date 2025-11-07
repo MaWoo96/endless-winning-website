@@ -162,10 +162,10 @@ export default function WhoWeHelp() {
             </AnimatePresence>
           </div>
 
-          {/* Desktop Layout (absolute positioning) - hidden on mobile */}
-          <div className="hidden lg:block relative h-[900px]">
-            {/* Icon - positioned at top:60px from Figma */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-[60px] z-10">
+          {/* Desktop Layout - Phone centered in circle with features */}
+          <div className="hidden lg:block relative pt-12 pb-[400px]">
+            {/* Icon */}
+            <div className="flex justify-center mb-6">
               <div className="w-[69px] h-[69px] rounded-full bg-gradient-to-br from-[#8ab2b2] to-[#BDEBEB] flex items-center justify-center">
                 <Image
                   src="/Who we help/analytics-up.svg"
@@ -177,104 +177,113 @@ export default function WhoWeHelp() {
               </div>
             </div>
 
-            {/* Title and Description - positioned at top:137px from Figma */}
+            {/* Title and Description */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
-                className="absolute left-1/2 -translate-x-1/2 top-[137px] w-[806px] text-center z-10"
+                className="text-center mb-10 max-w-3xl mx-auto"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
               >
-                <h3 className="text-[36px] font-semibold text-navy-dark leading-[28px] mb-4">
+                <h3 className="text-4xl font-semibold text-navy-dark mb-4">
                   {title}
                 </h3>
-                <p className="text-lg leading-[28px] text-navy-dark whitespace-pre-line">
-                  {description}
+                <p className="text-lg leading-relaxed text-navy-dark">
+                  {description.replace(/\n/g, ' ')}
                 </p>
               </motion.div>
             </AnimatePresence>
 
-            {/* Left Features - adjusted positioning for larger phone */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`left-${activeTab}`}
-                className="absolute left-[80px] top-[340px] flex flex-col gap-[150px] z-10"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3, delay: 0.05 }}
-              >
-                <div className="flex flex-col items-center gap-2 w-[205px]">
-                  <Image
-                    src="/Who we help/checkmark-square-02.svg"
-                    alt=""
-                    width={35}
-                    height={35}
-                  />
-                  <p className="text-xl font-medium text-navy-dark text-center leading-6 whitespace-pre-line">
-                    {features[0].text}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center gap-2 w-[205px]">
-                  <Image
-                    src="/Who we help/checkmark-square-02.svg"
-                    alt=""
-                    width={35}
-                    height={35}
-                  />
-                  <p className="text-xl font-medium text-navy-dark text-center leading-6 whitespace-pre-line">
-                    {features[2].text}
-                  </p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+            {/* Features and Phone Layout - with absolute positioned phone */}
+            <div className="relative max-w-6xl mx-auto">
+              <div className="grid grid-cols-3 gap-8 relative">
+                {/* Left Features */}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`left-${activeTab}`}
+                    className="flex flex-col gap-12 pt-8"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3, delay: 0.05 }}
+                  >
+                    <div className="flex flex-col items-center gap-3 text-center">
+                      <Image
+                        src="/Who we help/checkmark-square-02.svg"
+                        alt=""
+                        width={40}
+                        height={40}
+                      />
+                      <p className="text-lg font-medium text-navy-dark leading-6">
+                        {features[0].text.replace(/\n/g, ' ')}
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-center gap-3 text-center">
+                      <Image
+                        src="/Who we help/checkmark-square-02.svg"
+                        alt=""
+                        width={40}
+                        height={40}
+                      />
+                      <p className="text-lg font-medium text-navy-dark leading-6">
+                        {features[2].text.replace(/\n/g, ' ')}
+                      </p>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
 
-            {/* Center Phone Mockup - scaled up dramatically to match reference */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-[20px] w-[1200px] h-[1540px] shrink-0 z-10" style={{ aspectRatio: '448/575' }}>
-              <Image
-                src="/Who we help/7e0e14cfdc897a0675496bb6d08d9d3a08094d6e.png"
-                alt="Phone Mockup"
-                fill
-                className="object-contain"
-              />
+                {/* Center Column - Empty for spacing */}
+                <div></div>
+
+                {/* Right Features */}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`right-${activeTab}`}
+                    className="flex flex-col gap-12 pt-8"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }}
+                    transition={{ duration: 0.3, delay: 0.05 }}
+                  >
+                    <div className="flex flex-col items-center gap-3 text-center">
+                      <Image
+                        src="/Who we help/checkmark-square-02.svg"
+                        alt=""
+                        width={40}
+                        height={40}
+                      />
+                      <p className="text-lg font-medium text-navy-dark leading-6">
+                        {features[1].text.replace(/\n/g, ' ')}
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-center gap-3 text-center">
+                      <Image
+                        src="/Who we help/checkmark-square-02.svg"
+                        alt=""
+                        width={40}
+                        height={40}
+                      />
+                      <p className="text-lg font-medium text-navy-dark leading-6">
+                        {features[3].text.replace(/\n/g, ' ')}
+                      </p>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Phone Mockup - Absolutely positioned to align with circle, large with bottom half hidden */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-[140px] w-full max-w-[700px] z-20" style={{ aspectRatio: '448/575' }}>
+                <Image
+                  src="/Who we help/7e0e14cfdc897a0675496bb6d08d9d3a08094d6e.png"
+                  alt="Phone Mockup"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
-
-            {/* Right Features - adjusted positioning for larger phone */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`right-${activeTab}`}
-                className="absolute left-[1080px] top-[340px] flex flex-col gap-[150px] z-10"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3, delay: 0.05 }}
-              >
-                <div className="flex flex-col items-center gap-2 w-[205px]">
-                  <Image
-                    src="/Who we help/checkmark-square-02.svg"
-                    alt=""
-                    width={35}
-                    height={35}
-                  />
-                  <p className="text-xl font-medium text-navy-dark text-center leading-6 whitespace-pre-line">
-                    {features[1].text}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center gap-2 w-[205px]">
-                  <Image
-                    src="/Who we help/checkmark-square-02.svg"
-                    alt=""
-                    width={35}
-                    height={35}
-                  />
-                  <p className="text-xl font-medium text-navy-dark text-center leading-6 whitespace-pre-line">
-                    {features[3].text}
-                  </p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
           </div>
         </div>
       </div>

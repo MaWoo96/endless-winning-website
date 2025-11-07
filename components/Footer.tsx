@@ -45,11 +45,6 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#pricing" className="text-sm text-navy-dark hover:text-navy-dark/70 transition-colors">
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
                     <Link href="#contact" className="text-sm text-navy-dark hover:text-navy-dark/70 transition-colors">
                       Contact
                     </Link>
@@ -79,12 +74,12 @@ export default function Footer() {
                 <h4 className="text-base font-medium text-[#1e1a2a]">Info</h4>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <Link href="#terms" className="text-sm text-navy-dark hover:text-navy-dark/70 transition-colors">
+                    <Link href="https://endlesswinning.notion.site/Terms-Conditions-Terms-of-Use-2a450f64638780d3a76df1aed6854f3a" target="_blank" rel="noopener noreferrer" className="text-sm text-navy-dark hover:text-navy-dark/70 transition-colors">
                       Terms & Condition
                     </Link>
                   </li>
                   <li>
-                    <Link href="#privacy" className="text-sm text-navy-dark hover:text-navy-dark/70 transition-colors">
+                    <Link href="https://endlesswinning.notion.site/Privacy-Policy-2a450f64638780d794a8f3c910e2ef88" target="_blank" rel="noopener noreferrer" className="text-sm text-navy-dark hover:text-navy-dark/70 transition-colors">
                       Privacy Policy
                     </Link>
                   </li>
