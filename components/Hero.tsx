@@ -58,7 +58,7 @@ export default function Hero() {
                 <span className="text-navy-dark block">From where you are, to where you&apos;re called to be.</span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-gray max-w-2xl mx-auto lg:mx-0 px-4 lg:px-0 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-navy-dark/80 max-w-2xl mx-auto lg:mx-0 px-4 lg:px-0 leading-relaxed">
                 We help businesses and ministries position themselves to thrive in the age of AI – before disruption hits.
               </p>
             </motion.div>
@@ -73,10 +73,10 @@ export default function Hero() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }} className="w-full sm:w-auto">
                 <Link
                   href="#results"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 md:px-10 md:py-5 text-sm md:text-base font-bold border-2 border-navy-medium rounded-xl gradient-text hover:bg-navy-medium/5 transition-all duration-300 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-3 px-10 py-5 md:px-12 md:py-6 text-base md:text-lg font-bold border-2 border-navy-medium rounded-xl gradient-text hover:bg-navy-medium/5 transition-all duration-300 shadow-md w-full sm:w-auto"
                 >
                   <span>See Real Results</span>
-                  <svg className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                   </svg>
                 </Link>
@@ -135,7 +135,7 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-xs text-gray uppercase tracking-wider">Scroll</span>
+        <span className="text-xs text-navy-dark/70 uppercase tracking-wider">Scroll</span>
         <svg className="w-5 h-5 text-navy-medium" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>

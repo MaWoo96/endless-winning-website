@@ -43,7 +43,7 @@ export default function BookDiscoveryCall() {
   };
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-white relative overflow-hidden">
+    <section id="contact" className="py-8 sm:py-12 md:py-16 lg:py-24 bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute left-0 top-[450px] w-[566px] h-[308px] opacity-30">
         <div className="w-full h-full bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 blur-[100px]"></div>
@@ -113,30 +113,30 @@ export default function BookDiscoveryCall() {
           </div>
 
           {/* Right Side - Form */}
-          <div className="bg-white rounded-[24px] shadow-[0px_2px_52px_0px_rgba(0,0,0,0.08)] p-5 sm:p-7 md:p-9 lg:p-11 max-w-[502px] lg:ml-auto w-full">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5 md:gap-6">
+          <div className="bg-white rounded-[24px] shadow-[0px_2px_52px_0px_rgba(0,0,0,0.08)] p-6 sm:p-7 md:p-9 lg:p-11 max-w-[502px] lg:ml-auto w-full">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5 sm:gap-5 md:gap-6">
               {/* Form Header */}
-              <h3 className="text-xl sm:text-2xl md:text-[26px] lg:text-[28px] font-semibold text-navy-dark text-center">
+              <h3 className="text-xl sm:text-2xl md:text-[26px] lg:text-[28px] font-semibold text-navy-dark text-center mb-2">
                 Book a Discovery Call
               </h3>
 
               {/* Form Fields */}
-              <div className="flex flex-col gap-3 sm:gap-4">
+              <div className="flex flex-col gap-4 sm:gap-4">
                 {/* First Name & Last Name */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
                   <input
                     type="text"
                     placeholder="First Name"
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
+                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
+                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                   />
                 </div>
 
@@ -146,7 +146,7 @@ export default function BookDiscoveryCall() {
                   placeholder="Email Address"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
+                  className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                 />
 
                 {/* Organization */}
@@ -155,16 +155,16 @@ export default function BookDiscoveryCall() {
                   placeholder="Organization Name"
                   value={formData.organization}
                   onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                  className="w-full h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
+                  className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                 />
 
                 {/* Phone Number with Country Code */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
                   <div className="relative w-full sm:w-[120px]">
                     <button
                       type="button"
                       onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                      className="w-full h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between gap-2 text-sm sm:text-base text-navy-dark hover:border-navy-dark transition-colors"
+                      className="w-full h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between gap-2 text-base text-navy-dark hover:border-navy-dark transition-colors"
                     >
                       <span className="font-medium">{formData.countryCode}</span>
                       <Image
@@ -172,7 +172,7 @@ export default function BookDiscoveryCall() {
                         alt=""
                         width={24}
                         height={24}
-                        className="w-5 h-5 sm:w-6 sm:h-6"
+                        className="w-6 h-6"
                       />
                     </button>
                     {showCountryDropdown && (
@@ -199,24 +199,24 @@ export default function BookDiscoveryCall() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
+                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
                   />
                 </div>
 
                 {/* Date & Timezone */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
                   <input
                     type="date"
                     value={formData.date}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="flex-1 h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl text-sm sm:text-base text-navy-dark focus:outline-none focus:border-navy-dark"
+                    className="flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base text-navy-dark focus:outline-none focus:border-navy-dark"
                     min={new Date().toISOString().split('T')[0]}
                   />
                   <div className="relative flex-1">
                     <button
                       type="button"
                       onClick={() => setShowTimezoneDropdown(!showTimezoneDropdown)}
-                      className="w-full h-12 sm:h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between text-sm sm:text-base text-navy-dark hover:border-navy-dark transition-colors"
+                      className="w-full h-14 px-4 border border-[#dddddd] rounded-xl flex items-center justify-between text-base text-navy-dark hover:border-navy-dark transition-colors"
                     >
                       <span className="truncate">{formData.timezone}</span>
                       <Image
@@ -224,7 +224,7 @@ export default function BookDiscoveryCall() {
                         alt=""
                         width={24}
                         height={24}
-                        className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
+                        className="w-6 h-6 flex-shrink-0"
                       />
                     </button>
                     {showTimezoneDropdown && (
@@ -251,7 +251,7 @@ export default function BookDiscoveryCall() {
               {/* Submit Button - Enhanced */}
               <motion.button
                 type="submit"
-                className="w-full min-h-[56px] sm:min-h-[60px] md:min-h-[64px] bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white text-base sm:text-lg md:text-xl font-bold rounded-full shadow-lg mt-2"
+                className="w-full min-h-[64px] bg-gradient-to-r from-[#5856d6] to-[#ec4899] text-white text-lg md:text-xl font-bold rounded-full shadow-lg mt-3"
                 style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.25)' }}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
@@ -261,7 +261,7 @@ export default function BookDiscoveryCall() {
               </motion.button>
 
               {/* Terms */}
-              <p className="text-[11px] sm:text-xs text-center text-[rgba(26,7,16,0.65)] leading-4 px-2">
+              <p className="text-xs sm:text-sm text-center text-[rgba(26,7,16,0.65)] leading-relaxed px-2">
                 By continuing I agree with the{' '}
                 <a href="#" className="text-navy-dark font-medium underline">
                   Terms & Conditions
