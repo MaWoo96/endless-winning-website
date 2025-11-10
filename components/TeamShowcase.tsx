@@ -1,15 +1,20 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence, useMotionValue, useTransform } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function TeamShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const constraintsRef = useRef(null);
 
   const teamMembers = [
+    {
+      name: "Matthew Wood",
+      image: "/Winning Team/Matthew-Wood-Optimized.jpeg",
+      tags: ["Owner - Wood Tax Advisory", "CFO Services", "Financial Strategy", "AI-Powered Accounting", "Business Analytics"],
+      bio: "Matthew Wood is the owner of Wood Tax Advisory, providing expert CFO services and bookkeeping solutions that leverage AI technology to deliver clear, actionable financial insights. He helps businesses make data-driven decisions through comprehensive weekly, monthly, quarterly, and annual financial reporting that empowers scaling organizations.",
+      linkedin: ""
+    },
     {
       name: "Pastor Alex Burgos",
       image: "/Winning Team/Alex Burgos.jpeg",

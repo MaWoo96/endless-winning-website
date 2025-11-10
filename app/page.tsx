@@ -1,19 +1,22 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import ServicesShowcase from '@/components/ServicesShowcase';
-import TestimonialsCarousel from '@/components/TestimonialsCarousel';
-import WorkingWithUs from '@/components/WorkingWithUs';
-import AscendProcess from '@/components/AscendProcess';
-import WhoWeHelp from '@/components/WhoWeHelp';
-import TeamShowcase from '@/components/TeamShowcase';
-import BookDiscoveryCall from '@/components/BookDiscoveryCall';
-import FAQ from '@/components/FAQ';
-import Footer from '@/components/Footer';
-import AboutModal from '@/components/AboutModal';
 import AnimatedSection from '@/components/AnimatedSection';
+
+// Lazy load below-the-fold components for better performance
+const ServicesShowcase = dynamic(() => import('@/components/ServicesShowcase'));
+const TestimonialsCarousel = dynamic(() => import('@/components/TestimonialsCarousel'));
+const WorkingWithUs = dynamic(() => import('@/components/WorkingWithUs'));
+const AscendProcess = dynamic(() => import('@/components/AscendProcess'));
+const WhoWeHelp = dynamic(() => import('@/components/WhoWeHelp'));
+const TeamShowcase = dynamic(() => import('@/components/TeamShowcase'));
+const BookDiscoveryCall = dynamic(() => import('@/components/BookDiscoveryCall'));
+const FAQ = dynamic(() => import('@/components/FAQ'));
+const Footer = dynamic(() => import('@/components/Footer'));
+const AboutModal = dynamic(() => import('@/components/AboutModal'));
 
 export default function Home() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
