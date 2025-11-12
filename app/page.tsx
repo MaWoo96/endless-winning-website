@@ -17,6 +17,7 @@ const BookDiscoveryCall = dynamic(() => import('@/components/BookDiscoveryCall')
 const FAQ = dynamic(() => import('@/components/FAQ'));
 const Footer = dynamic(() => import('@/components/Footer'));
 const AboutModal = dynamic(() => import('@/components/AboutModal'));
+const ExitIntentPopup = dynamic(() => import('@/components/ExitIntentPopup'));
 
 export default function Home() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
@@ -55,6 +56,7 @@ export default function Home() {
         </AnimatedSection>
       </main>
       <AboutModal isOpen={isAboutModalOpen} onClose={() => setIsAboutModalOpen(false)} />
+      <ExitIntentPopup />
     </>
   );
 }

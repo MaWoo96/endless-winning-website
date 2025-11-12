@@ -146,6 +146,7 @@ export default function BookDiscoveryCall() {
                     placeholder="First Name"
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    required
                     className="w-full sm:flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                   />
                   <input
@@ -153,6 +154,7 @@ export default function BookDiscoveryCall() {
                     placeholder="Last Name"
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    required
                     className="w-full sm:flex-1 h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                   />
                 </div>
@@ -163,6 +165,7 @@ export default function BookDiscoveryCall() {
                   placeholder="Email Address"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
                   className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                 />
 
@@ -172,6 +175,7 @@ export default function BookDiscoveryCall() {
                   placeholder="Organization Name"
                   value={formData.organization}
                   onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
+                  required
                   className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] focus:outline-none focus:border-navy-dark"
                 />
 
@@ -181,6 +185,7 @@ export default function BookDiscoveryCall() {
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
                   className="w-full h-14 px-4 border border-[#dddddd] rounded-xl text-base placeholder:text-[rgba(26,7,16,0.65)] text-navy-dark focus:outline-none focus:border-navy-dark"
                 />
               </div>
