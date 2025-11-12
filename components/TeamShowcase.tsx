@@ -9,13 +9,6 @@ export default function TeamShowcase() {
 
   const teamMembers = [
     {
-      name: "Matthew Wood",
-      image: "/Winning Team/Matthew-Wood-Optimized.jpeg",
-      tags: ["Owner - Wood Tax Advisory", "CFO Services", "Financial Strategy", "AI-Powered Accounting", "Business Analytics"],
-      bio: "Matthew Wood is the owner of Wood Tax Advisory, providing expert CFO services and bookkeeping solutions that leverage AI technology to deliver clear, actionable financial insights. He helps businesses make data-driven decisions through comprehensive weekly, monthly, quarterly, and annual financial reporting that empowers scaling organizations.",
-      linkedin: ""
-    },
-    {
       name: "Pastor Alex Burgos",
       image: "/Winning Team/Alex Burgos.jpeg",
       tags: ["Senior Pastor", "Business Mentorship", "Kingdom Business", "Leadership Development", "Wealth Building"],
@@ -34,6 +27,13 @@ export default function TeamShowcase() {
       image: "/Winning Team/Tony Uteegard.jpeg",
       tags: ["Visionary Entrepreneur", "Real Estate Developer", "Investor", "Kingdom Business", "Luxury Design"],
       bio: "Tony Utegaard is a visionary entrepreneur, investor, and developer based in Bel Air Bluffs, Florida, leading multi-million-dollar ventures in real estate, construction, and luxury design while teaching business and financial principles through Kingdom Business Fellowship.",
+      linkedin: ""
+    },
+    {
+      name: "Matthew Wood",
+      image: "/Winning Team/Matthew-Wood-Optimized.jpeg",
+      tags: ["Owner - Wood Tax Advisory", "CFO Services", "Financial Strategy", "AI-Powered Accounting", "Business Analytics"],
+      bio: "Matthew Wood is the owner of Wood Tax Advisory, providing expert CFO services and bookkeeping solutions that leverage AI technology to deliver clear, actionable financial insights. He helps businesses make data-driven decisions through comprehensive weekly, monthly, quarterly, and annual financial reporting that empowers scaling organizations.",
       linkedin: ""
     }
   ];
