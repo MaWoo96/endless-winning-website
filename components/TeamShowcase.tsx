@@ -46,7 +46,7 @@ export default function TeamShowcase() {
     setCurrentSlide((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
   };
 
-  const handleDragEnd = (event: any, info: any) => {
+  const handleDragEnd = (_event: unknown, info: { velocity: { x: number }; offset: { x: number } }) => {
     const swipeThreshold = 30; // Reduced threshold for faster response
     const velocity = info.velocity.x;
 

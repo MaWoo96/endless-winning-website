@@ -20,7 +20,7 @@ export default function WorkingWithUs() {
             What Working with Us Looks Like
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-light text-neutral-950 max-w-3xl mx-auto px-4 leading-relaxed">
-            We don't just build systems — we build momentum. Here's what our clients experience after partnering with Endless Winning.
+            We don&apos;t just build systems — we build momentum. Here&apos;s what our clients experience after partnering with Endless Winning.
           </p>
         </div>
 
@@ -178,7 +178,7 @@ export default function WorkingWithUs() {
                   Future Proof Your Organization
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg text-white/95 leading-relaxed">
-                  AI is reshaping entire industries. The organizations that don't position themselves will be left behind. The best time to future-proof was yesterday. The next best time is now.
+                  AI is reshaping entire industries. The organizations that don&apos;t position themselves will be left behind. The best time to future-proof was yesterday. The next best time is now.
                 </p>
               </div>
             </div>

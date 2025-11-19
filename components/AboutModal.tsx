@@ -149,7 +149,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
                   {/* Description - exact Figma text */}
                   <div className="flex flex-col gap-4 sm:gap-5 mb-6 sm:mb-7 md:mb-8">
                     <p className="text-sm sm:text-base text-[#1e1a2a] leading-relaxed">
-                      Endless Winning exists to bridge the gap between where organizations are and where they're called to be. With expertise in AI innovation, sales systems, and process automation, the team helps leaders work smarter, scale faster, and achieve lasting impact.
+                      Endless Winning exists to bridge the gap between where organizations are and where they&apos;re called to be. With expertise in AI innovation, sales systems, and process automation, the team helps leaders work smarter, scale faster, and achieve lasting impact.
                     </p>
                     <p className="text-sm sm:text-base text-[#1e1a2a] leading-relaxed">
                       From businesses to ministries, Endless Winning has guided transformations that turn challenges into opportunities and ideas into measurable results - building momentum that never stops.

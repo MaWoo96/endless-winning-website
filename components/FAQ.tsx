@@ -170,7 +170,7 @@ export default function FAQ() {
         {/* CTA at bottom */}
         <div className="text-center mt-8 sm:mt-12">
           <p className="text-base sm:text-lg text-navy-dark mb-4 sm:mb-6">
-            Still have questions? Let's talk.
+            Still have questions? Let&apos;s talk.
           </p>
           <a
             href="#booking-form"

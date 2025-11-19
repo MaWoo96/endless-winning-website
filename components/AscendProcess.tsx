@@ -8,27 +8,39 @@ import { motion, useInView } from 'motion/react';
 export default function AscendProcess() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "400px" });
-  const [isClient, setIsClient] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // Use lazy initialization to avoid setState in useEffect
+  const [isClient] = useState(() => typeof window !== 'undefined');
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768;
+    }
+    return false;
+  });
 
-  // Detect mobile and client side
+  // Handle window resize
   useEffect(() => {
-    setIsClient(true);
-    setIsMobile(window.innerWidth < 768);
-  }, []);
+    if (!isClient) return;
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isClient]);
 
   const steps = [
     {
       letter: "A",
       title: "Assess",
-      italicPart: "Get clarity.",
-      regularPart: " Discover where you are and what's holding "
+      italicPart: "Get clarity,",
+      regularPart: " discover where you are and what's holding you back."
     },
     {
       letter: "S",
       title: "Simplify",
-      italicPart: "Cut the noise.",
-      regularPart: " Identify AI opportunities and eliminate"
+      italicPart: "Cut the noise,",
+      regularPart: " identify the fluff. Determine what's essential and where it makes sense."
     },
     {
       letter: "C",

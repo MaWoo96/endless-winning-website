@@ -75,7 +75,7 @@ export default function TestimonialsCarousel() {
             Real Transformations. Proven Results.
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-light text-neutral-950 max-w-3xl mx-auto px-4 leading-relaxed">
-            Hear from the leaders and organizations who've experienced lasting impact through Endless Winning's strategies and solutions.
+            Hear from the leaders and organizations who&apos;ve experienced lasting impact through Endless Winning&apos;s strategies and solutions.
           </p>
         </div>
 
@@ -92,8 +92,8 @@ export default function TestimonialsCarousel() {
             </svg>
           </button>
 
-          {/* Cards Container - Single Card Display */}
-          <div className="relative w-full max-w-[800px] mx-auto">
+          {/* Cards Container - Single Card Display with fixed height */}
+          <div className="relative w-full max-w-[800px] mx-auto min-h-[500px] sm:min-h-[450px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -101,20 +101,20 @@ export default function TestimonialsCarousel() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.3 }}
-                className="w-full"
+                className="w-full absolute inset-0"
               >
                 {(() => {
                   const testimonial = testimonials[currentSlide];
                   return (
                     <motion.div
-                      className="testimonial-card w-full"
+                      className="testimonial-card w-full h-full"
                       whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
                     >
-                  <div className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative shadow-sm hover:shadow-xl transition-shadow duration-300 h-full">
+                  <div className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden relative shadow-sm hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     {/* Gradient bottom border */}
                     <div className="absolute bottom-0 left-0 right-0 h-[4px] sm:h-[6px] bg-gradient-to-r from-[#5856D6] via-[#AF52DE] via-[#FF2D92] via-[#FF9500] via-[#40CBF0] to-[#007AFF]"></div>
 
-                    <div className="p-6 sm:p-8 flex flex-col items-center">
+                    <div className="p-6 sm:p-8 flex flex-col items-center flex-1 justify-center">
                       {/* LinkedIn Company Badge */}
                       <div className="flex items-center justify-center gap-2 mb-4 sm:mb-6">
                         <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -141,7 +141,7 @@ export default function TestimonialsCarousel() {
 
                       {/* Quote */}
                       <p className="text-base sm:text-lg text-navy-dark text-center leading-relaxed mb-6 sm:mb-9">
-                        "{testimonial.quote}"
+                        &ldquo;{testimonial.quote}&rdquo;
                       </p>
 
                       {/* Author */}

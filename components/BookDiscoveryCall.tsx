@@ -96,7 +96,7 @@ export default function BookDiscoveryCall() {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg text-[#1e1a2a] leading-relaxed px-2 sm:px-0">
-              Share a few details about you and your organization. In this session, we'll uncover growth opportunities, identify roadblocks, and design a clear plan powered by AI, systems, and automation to accelerate your results.
+              Share a few details about you and your organization. In this session, we&apos;ll uncover growth opportunities, identify roadblocks, and design a clear plan powered by AI, systems, and automation to accelerate your results.
             </p>
 
             {/* Contact Info */}
@@ -264,7 +264,7 @@ export default function BookDiscoveryCall() {
                 Thank You!
               </h3>
               <p className="text-base sm:text-lg text-center text-navy-dark mb-8 leading-relaxed">
-                Your discovery call request has been submitted successfully. We'll be in touch with you shortly to schedule your session.
+                Your discovery call request has been submitted successfully. We&apos;ll be in touch with you shortly to schedule your session.
               </p>
 
               {/* Close Button */}
