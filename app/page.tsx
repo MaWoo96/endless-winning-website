@@ -8,6 +8,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 
 // Lazy load below-the-fold components for better performance
 const ServicesShowcase = dynamic(() => import('@/components/ServicesShowcase'));
+const AIDemoSection = dynamic(() => import('@/components/AIDemoSection'));
 const TestimonialsCarousel = dynamic(() => import('@/components/TestimonialsCarousel'));
 const WorkingWithUs = dynamic(() => import('@/components/WorkingWithUs'));
 const AscendProcess = dynamic(() => import('@/components/AscendProcess'));
@@ -27,6 +28,9 @@ export default function Home() {
       <main className="min-h-screen">
         <Header onAboutClick={() => setIsAboutModalOpen(true)} />
         <Hero />
+        <AnimatedSection>
+          <AIDemoSection />
+        </AnimatedSection>
         <AnimatedSection>
           <ServicesShowcase />
         </AnimatedSection>
